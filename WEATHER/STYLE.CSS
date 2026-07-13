@@ -6,7 +6,7 @@
 }
 
 body{
-    height: 1000vh;
+    height: 100vh;
 
 }
 
@@ -19,8 +19,22 @@ body{
     width: 25%;
     position: fixed;
     inset: 0;
-    background-color: #78c1f3;
+  background: linear-gradient(
+    180deg,
+    #0f172a,
+    #1e293b,
+    #334155
+);
     padding: 1rem 2.5rem;
+}
+
+.weather-icon{
+    background-position: 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: contain;
+    display: block;
+    height: 25%;
+    margin: 2rem auto;
 }
 
 .input-group{
@@ -28,6 +42,7 @@ body{
     display: flex;
     align-items: center;
     margin: 2rem 0;
+   
 }
 
 .input-group input {
@@ -58,29 +73,55 @@ outline: none;
     font-size: 1.3rem;
 }
 
+.weather-input .feelslike,
+.weather-input .description,
+.weather-input .date,
+.weather-input .city{
+    padding: 0.6rem 0 ;
+     color: white;
+
+}
+
+.temperature{
+    font-size: 5rem;
+    text-align: center;
+    display: flex;
+    font-weight: 300;
+     color: white;
+}
+
+.unit{
+    font-size: 0.5em;
+    vertical-align: text-top;
+}
+
 .weather-output{
-    width: 60%;
+    width: 75%;
     position: fixed;
-    margin-left: 40%;
+    margin-left: 25%;
     inset: 0;
     padding: 2rem ;
-    background-color: #f6f6f6;
+   background: #0b1120;
     overflow: auto;
 
 }
 
+
 .highlight{
-    width: 100;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3 , 16.9rem);
+    grid-template-columns: repeat(3 , 20rem);
     grid-auto-flow: row;
-    row-gap: 1rem;
+    row-gap: 2rem;
     column-gap: 0.6rem;
 }
 
 .highlight div {
     height: 12.5rem;
-    background-color: #78c1f3;
+    background: #1e293b;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     display: grid;
     align-items: center;
     justify-content: center;
@@ -97,4 +138,8 @@ outline: none;
     display: flex;
     align-items: center;
     gap: 0.6rem;
+}
+
+.description i{
+    font-size: 2rem;
 }
